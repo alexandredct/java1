@@ -1,0 +1,11 @@
+package manager;
+
+import java.util.ArrayList;
+
+import entity.Pessoa;
+
+public class ManagerPessoa {
+	static ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>();
+	
+
+}

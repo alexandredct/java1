@@ -1,0 +1,13 @@
+#entity _ dados (tabela) -- relacionamentos
+
+#business _ métodos (regra de negócio) _test
+
+#controller _ lógica
+
+#test _ teste unitário (Caixa Branca) _ programador
+
+#view _ formatação, entrada e saída
+
+#---
+#configuração mínima (java 1.8)
+## ide eclipse (olho nos atalhos o diferencial)

@@ -1,0 +1,78 @@
+package entity;
+
+import java.io.Serializable;//Transporte ou conversões
+import java.util.Arrays;
+
+public class Pessoa implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3L;
+	
+	/*
+	 * Modificadores de acesso: private, protected, (default), public
+	 * 
+	 * Tipos (String / StringBuffer / StringBuilder)
+	 */
+	private String nome;
+	
+	private String email;
+	
+	/* transiente: campo que não é persistido */
+	/* tipos numéricos: byte 8, short 16, int 32, long 64 
+	 *       Wrappers Byte 8, Short 16, Integer 32, Long 64,
+	 *       BigInteger: o maior inteiro (utilizado hoje)
+	 * */
+	private transient Integer idade;
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Integer getIdade() {
+		return idade;
+	}
+
+	public void setIdade(Integer idade) {
+		this.idade = idade;
+	}
+	
+	//atalhos para criar o alimentador do atributo
+	// alt + s > generate getters and setters
+	public static void main(String[] args) {
+		Pessoa p = new Pessoa();
+		p.setNome("Alexandre");
+		p.setIdade(28);
+		p.setEmail("teste@teste.com");
+		
+		String msg = 0+1 + ", " + p.getNome() + ", " + p.getEmail() + ", " + 1+1 + ", " + 0 + p.getIdade();
+		
+		String resposta[] = msg.split(",");
+		
+		System.out.println(resposta[1]);
+		
+		
+		System.out.println(Arrays.asList(resposta));
+		for (String elemento : resposta) {
+			System.out.println(elemento);
+		}
+		
+		for (int indice=0; indice < resposta.length; indice++) {
+			System.out.println("indice="+indice + " / valor=" + resposta[indice]);
+		}
+	}
+
+}

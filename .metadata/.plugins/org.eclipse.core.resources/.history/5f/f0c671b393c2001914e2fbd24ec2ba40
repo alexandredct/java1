@@ -1,0 +1,17 @@
+package manager;
+
+import java.util.ArrayList;
+
+import entity.Pessoa;
+
+public class ManagerPessoa {
+	static ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>();
+	
+	static {
+		pessoas.add(new Pessoa("Pessoa 1", "pessoa1@gmail.com", 1));
+		pessoas.add(new Pessoa("Pessoa 2", "pessoa2@gmail.com", 2));
+		pessoas.add(new Pessoa("Pessoa 3", "pessoa3@gmail.com", 3));
+	}
+	
+
+}
