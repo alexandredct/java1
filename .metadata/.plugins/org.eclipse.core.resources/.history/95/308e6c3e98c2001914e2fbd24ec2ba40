@@ -74,13 +74,6 @@ public class Pessoa implements Serializable{
 		for (int indice=0; indice < resposta.length; indice++) {
 			System.out.println("indice="+indice + " / valor=" + resposta[indice]);
 		}
-		
-		System.out.println("É UMA IDADE? " +p.isIdade());
-		System.out.println("É UM NOME? " +p.isNome());
-		System.out.println("  alexandre trindade    ".trim()+".");
-		System.out.println();
-		System.err.println("9 é letra? "+Character.isLetter('9'));
-		System.out.println(Math.PI);
 	}
 
 	public Pessoa(String nome, String email, Integer idade) {
@@ -94,7 +87,6 @@ public class Pessoa implements Serializable{
 		super();
 	}
 
-	/* Representa todos os dados ao mesmo tempo */
 	@Override
 	public String toString() {
 		return "Pessoa [nome=" + nome + ", email=" + email + "]";
@@ -106,19 +98,5 @@ public class Pessoa implements Serializable{
 	 *  - construtores
 	 *  - toString()
 	 * */
-	
-	public boolean isIdade() {
-		if (this.getIdade()< 18) {
-			return false;
-		}
-		return true;
-	}
-	
-	public Boolean isNome() {
-		if (this.nome.trim().length() < 2) {
-			return false;
-		}
-		return true;
-	}
 
 }
